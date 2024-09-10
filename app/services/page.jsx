@@ -11,29 +11,29 @@ const services = [
   { 
     num: '01',
     title: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur',
+    description: 'Crafting modern and responsive websites tailored to your business needs.',
     href: ''
   },
   { 
     num: '02',
     title: 'Graphic Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur',
+    description: 'Creating eye-catching visuals to enhance your brand identity and communication.',
     href: ''
   },
   { 
     num: '03',
     title: 'Magazine',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur',
+    description: 'Designing engaging magazine layouts that captivate readers and deliver your message effectively.',
     href: ''
   },
   { 
     num: '04',
     title: 'Blogs',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur',
+    description: 'Developing compelling blog content and design to attract and retain your audience.',
     href: ''
   },
- 
-]
+];
+
 
 
 

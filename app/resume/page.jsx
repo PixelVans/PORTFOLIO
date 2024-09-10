@@ -12,13 +12,13 @@ import {
 } from 'react-icons/fa';
 
 import {SiTailwindcss, SiNextdotjs} from 'react-icons/si';
-
-
+import { SiRedux } from 'react-icons/si'; // Import the Redux icon
+import { SiVite } from 'react-icons/si'; // Import the Vite icon
 
  //about data
 const about = {
   title: 'About me',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur',
+description: 'I am a passionate full-stack developer specializing in efficient application development with expertise in modern web technologies.',
 
   info: [
     {
@@ -31,7 +31,7 @@ const about = {
     },
     {
       fieldName: 'Experience',
-      fieldValue: '6+ years'
+      fieldValue: '3+ years'
     },
     {
       fieldName: 'Skype',
@@ -61,7 +61,7 @@ const about = {
 const experience = {
   icon: '/assets/next.svg',
   title: 'My experience',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur",
+  description: 'Skilled in developing dynamic and user-friendly web applications.',
   items: [
     {
       company: 'KE-webshub',
@@ -83,10 +83,10 @@ const experience = {
 const education = {
   icon: '/assets/next.svg',
   title: 'My education',
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur",
+  description: 'Gaining essential web development skills through courses and projects.',
   items: [
     {
-      institution: 'Codecademy',
+      institution: 'FreeCodeCamp',
       degree: 'Front-end Track',
     
     },
@@ -99,39 +99,42 @@ const education = {
 }
 
 const skills = {
-  title: 'My skills',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eaque tenetur',
+  title: 'My Skills',
+ description: 'Mastery of the technologies below, ensuring high-quality development.',
   skillList: [
     {
       icon: <FaHtml5 />,
-      name: 'html 5'
+      name: 'HTML5'
     },
     {
       icon: <FaCss3 />,
-      name: 'css 3'
+      name: 'CSS3'
     },
     {
       icon: <FaJs />,
-      name: 'javascript',
+      name: 'JavaScript',
     },
     {
       icon: <FaReact />,
-      name: 'react.js'
+      name: 'React.js'
     },
     {
-      icon: <SiNextdotjs />,
-      name: 'next.js'
+        icon: <SiVite />,
+      name: 'Vite'
     },
     {
       icon: <SiTailwindcss />,
-      name: 'tailwind.css',
+      name: 'Tailwind CSS',
     },
     {
       icon: <FaNodeJs />,
-      name: 'node.js',
+      name: 'Node.js',
+    },
+    {
+      icon: <SiRedux />,
+      name: 'Redux',
     },
   ],
-
 };
 
 
@@ -210,7 +213,7 @@ import { easeIn, motion } from 'framer-motion';
              <TabsContent value='education' className='w-full'>
              <div className='flex flex-col gap-[30px] text-center xl:text-left'>
                  <h3 className='text-4xl font-bold'>{education.title}</h3>
-                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{ experience.description}</p>
+                 <p className='max-w-[600px] text-white/60 mx-auto xl:mx-0'>{ education.description}</p>
                  <ScrollArea className='h-[400px]'>
                    <ul className='grid grid-cols-1 lg:grid-cols-2 gap-[30px]' >
                      {education.items.map((item, index) => {
