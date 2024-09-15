@@ -42,14 +42,17 @@ const Contact = () => {
   const [phone, setPhone] = useState('');
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false); // Loading state for button
 
   const form = useRef();
 
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading
 
     emailjs
-      .sendForm('service_ny2amna', 'template_ku2uc7l', form.current, 'oiK72QBsDA5cTM45w')
+      .sendForm('service_ny2amna', 'template_ku2uc7l', form.current, 'oiK72QBsDA5cTM45w', {
+      })
       .then(
         () => {
           toast.success('Your message has been sent to PixelVans!');
@@ -59,10 +62,12 @@ const Contact = () => {
           setPhone('');
           setService('');
           setMessage('');
+          setLoading(false); // Stop loading
         },
         (error) => {
           toast.error('Failed to send your message. Please try again later.');
           console.log('FAILED...', error.text);
+          setLoading(false); // Stop loading
         },
       );
   };
@@ -115,7 +120,9 @@ const Contact = () => {
               <Textarea className='h-[200px]' placeholder='Type your message here' name='message' value={message} onChange={(e) => setMessage(e.target.value)} />
 
               {/* submit button */}
-              <Button type="submit">Send Message</Button>
+              <Button type="submit" disabled={loading}>
+                {loading ? 'Sending...' : 'Send Message'}
+              </Button>
 
             </form>
           </div>
