@@ -1,17 +1,19 @@
+// app/layout.jsx
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-
-//components
- import Header from "@/components/Header";
+// components
+import Header from "@/components/Header";
 import PageTransition from "@/components/PageTransition";
 import StairTransition from "@/components/StairTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  Weight: ['100', '200', '300', '400', '500', '600', '700', '800',],
-  variable: '--font-jetbrainsMono'
- });
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800'],
+  variable: '--font-jetbrainsMono',
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -23,12 +25,12 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={jetbrainsMono.variable}>
         <Header />
-        <StairTransition/>
+        <StairTransition />
         <PageTransition>
- {children}
+          {children}
         </PageTransition>
-       
-        </body>
+        <ToastContainer /> {/* Add ToastContainer here */}
+      </body>
     </html>
   );
 }

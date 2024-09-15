@@ -1,6 +1,6 @@
 'use client';
-
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/select";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { easeIn, motion } from "framer-motion";
+import { toast } from 'react-toastify';
 
 const info = [
   {
@@ -42,30 +43,28 @@ const Contact = () => {
   const [service, setService] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
     e.preventDefault();
 
-    const subject = 'Contact Form Submission';
-    const body = `
-      First Name: ${firstName}
-      Last Name: ${lastName}
-      Email: ${email}
-      Phone: ${phone}
-      Service: ${service}
-      Message: ${message}
-    `;
-
-    const mailtoLink = `mailto:evansmemba333@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailtoLink;
-
-    // Optionally clear form fields
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setPhone('');
-    setService('');
-    setMessage('');
+    emailjs
+      .sendForm('service_ny2amna', 'template_ku2uc7l', form.current, 'oiK72QBsDA5cTM45w')
+      .then(
+        () => {
+          toast.success('Your message has been sent to PixelVans!');
+          setFirstName('');
+          setLastName('');
+          setEmail('');
+          setPhone('');
+          setService('');
+          setMessage('');
+        },
+        (error) => {
+          toast.error('Failed to send your message. Please try again later.');
+          console.log('FAILED...', error.text);
+        },
+      );
   };
 
   return (
@@ -80,7 +79,7 @@ const Contact = () => {
           <div className="xl:w-[60%] order-2 xl:order-none">
             <form
               className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl"
-              onSubmit={handleSubmit}
+              ref={form} onSubmit={sendEmail}
             >
               <h3 className="text-4xl text-accent">Let's work together</h3>
               <p className="text-white/60">
@@ -91,29 +90,29 @@ const Contact = () => {
 
               {/* input */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type='text' placeholder='First name' value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-                <Input type='text' placeholder='Last name' value={lastName} onChange={(e) => setLastName(e.target.value)} />
-                <Input type='email' placeholder='Email address' value={email} onChange={(e) => setEmail(e.target.value)} />
-                <Input type='tel' placeholder='Phone number' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                <Input type='text' placeholder='First name' value={firstName} name='first_name' onChange={(e) => setFirstName(e.target.value)} />
+                <Input type='text' placeholder='Last name' value={lastName} name='last_name' onChange={(e) => setLastName(e.target.value)} />
+                <Input type='email' placeholder='Email address' value={email} name='email' onChange={(e) => setEmail(e.target.value)} />
+                <Input type='tel' placeholder='Phone number' value={phone} name='phone' onChange={(e) => setPhone(e.target.value)} />
               </div>
 
               {/* select */}
-              <Select value={service} onValueChange={setService}>
+              <Select name='service' value={service} onValueChange={setService}>
                 <SelectTrigger className='w-full'>
                   <SelectValue placeholder='Select a service' />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>
                     <SelectLabel>Select a service</SelectLabel>
-                    <SelectItem value='Web Development'>Web Development</SelectItem>
-                    <SelectItem value='Logo Design'>Logo Design</SelectItem>
-                    <SelectItem value='Blogging services'>Blogging services</SelectItem>
+                    <SelectItem name='web' value='Web Development'>Web Development</SelectItem>
+                    <SelectItem name='logo' value='Logo Design'>Logo Design</SelectItem>
+                    <SelectItem name='blog' value='Blogging services'>Blogging services</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
 
               {/* textarea */}
-              <Textarea className='h-[200px]' placeholder='Type your message here' value={message} onChange={(e) => setMessage(e.target.value)} />
+              <Textarea className='h-[200px]' placeholder='Type your message here' name='message' value={message} onChange={(e) => setMessage(e.target.value)} />
 
               {/* submit button */}
               <Button type="submit">Send Message</Button>
