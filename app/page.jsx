@@ -22,10 +22,10 @@ const Home = () => {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-xl">Software Developer</span>
             <h1 className="h1 mb-6">
-              Hello I'm <br/><span className="text-accent">PixelVans</span>
+              Hello I'm <br/><span className="text-accent">Evans.M.</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              I build seamless digital experiences from pixel-perfect designs to robust backend systems. Lets bring your ideas to life, one line of code at a time.</p>
+            Delivering end-to-end solutions that bridge design and functionality, turning ideas into impactful digital realities.</p>
           
           
           {/* btn and socials */}
