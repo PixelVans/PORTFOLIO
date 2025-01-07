@@ -25,9 +25,9 @@ const Photo = () => {
                       quality={100}
                       fill
                       alt=''
-                  className='object-contain'/>
+                  className='object-contain p-[50px] xl:p-[90px]'/>
               </motion.div>
-
+ 
               {/* circle  */}
               <motion.svg
                   className={'w-[260px] xl:w-[460px] h-[260px] xl:h-[460px]'}
