@@ -45,17 +45,38 @@ const projects = [
   
   {
     num: '03',
-    category: 'frontend',
-    title: 'Pixelwear',
-    description: 'E-commerce app for a clothing company',
+    category: 'frontend. (ongoing..)',
+    title: 'Glowstride',
+    description: 'E-commerce app for a fashion company',
     stack: [{ name: 'Next.js' }, { name: 'Tailwind.css' }, { name: 'Node.js' }],
-    Image: '/assets/pixelwear.jpg',
-     live: 'https://pixelwear333.vercel.app/',
+    Image: '/assets/glow.jpg',
+     live: 'https://glowstride.vercel.app/',
    
     github: '',
   },
   {
     num: '04',
+    category: 'static blog app [11ty.]',
+    title: 'Static blog app',
+    description: 'A blog app built with 11ty and served by netlify CMS',
+    stack: [{ name: 'Eleventy' }, { name: 'CSS3' }, { name: 'Netlify CMS' }],
+    Image: '/assets/11ty.jpg',
+     live: 'https://arsenblog.netlify.app/',
+   
+    github: '',
+  },
+  {
+    num: '05',
+    category: 'fullstack',
+    title: 'Vertex SCH mgt',
+    description: 'A school management system built on nextjs',
+    stack: [{ name: 'Next.js' }, { name: 'Tailwind.css' }, { name: 'Node.js' }],
+    Image: '/assets/school.jpg',
+     live: 'https://vertex-sch-mgt.onrender.com/',
+    github: '',
+  },
+  {
+    num: '06',
     category: 'fullstack',
     title: 'library',
     description: 'sketch project, big screens only',
