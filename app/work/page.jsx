@@ -1,8 +1,5 @@
 
 
-
-
-
 'use client'
 
 import { motion } from 'framer-motion';
@@ -24,13 +21,24 @@ const projects = [
   {
     num: '01',
     category: 'fullstack',
+    title: 'Hey DJ',
+    description: 'A full-stack AI-powered music recommendation app developed using React, Vite, Tailwind CSS, Node.js, and OpenAI API for natural language understanding.',
+    stack: [{ name: 'React' }, { name: 'Tailwind CSS' }, { name: 'Node.js' }, { name: 'OpenAI API' }],
+    Image: '/assets/heydj.jpg',
+    live: 'https://heydjtest.vercel.app/',
+    github: 'https://github.com/PixelVans'
+  },
+  
+  {
+    num: '01',
+    category: 'fullstack',
     title: 'Autovault1',
-    description: 'A full-stack project developed using React, Vite, Tailwind CSS, Material-UI, Redux, and Node.js.'
+    description: 'An Ongoing full-stack project developed using React, Vite, Tailwind CSS, Material-UI, Redux, and Node.js.'
     ,
     stack: [{ name: 'Html 5' }, { name: 'Css 3' }, { name: 'Javascript' }],
     Image: '/assets/autovolt.jpg',
     live: 'https://autovault1.onrender.com/',
-    github: '',
+    github: 'https://github.com/PixelVans',
   },
   {
     num: '02',
@@ -40,20 +48,19 @@ const projects = [
     stack: [{ name: 'React' }, { name: 'Redux' }, { name: 'Vite' }, { name: 'Node.js' }],
     Image: '/assets/estate.jpg',
     live: 'https://vans-estate.onrender.com/',
-    github: '',
+    github: 'https://github.com/PixelVans',
   },
-  
-  {
+    {
     num: '03',
-    category: 'frontend. (ongoing..)',
-    title: 'Glowstride',
-    description: 'E-commerce app for a fashion company',
-    stack: [{ name: 'Next.js' }, { name: 'Tailwind.css' }, { name: 'Node.js' }],
-    Image: '/assets/glow.jpg',
-     live: 'https://glowstride.vercel.app/',
-   
-    github: '',
+    category: 'backend',
+    title: 'LinkedIn Scraper with Scrapy',
+    description: 'A Python-based web scraping project that automates the extraction of job listings from LinkedIn using Scrapy, with structured export to CSV/JSON.',
+    stack: [{ name: 'Python' }, { name: 'Scrapy' }, { name: 'XPath' }, { name: 'Pandas' }],
+    Image: '/assets/linkedin.jpg',
+    live: '',
+    github: 'https://github.com/PixelVans'
   },
+
   {
     num: '04',
     category: 'static blog app [11ty.]',
@@ -63,27 +70,41 @@ const projects = [
     Image: '/assets/11ty.jpg',
      live: 'https://arsenblog.netlify.app/',
    
-    github: '',
+    github: 'https://github.com/PixelVans',
   },
+
   {
     num: '05',
-    category: 'fullstack',
-    title: 'Vertex SCH mgt',
-    description: 'A school management system built on nextjs',
+    category: 'frontend. (ongoing..)',
+    title: 'Glowstride',
+    description: 'E-commerce app for a fashion company under development',
     stack: [{ name: 'Next.js' }, { name: 'Tailwind.css' }, { name: 'Node.js' }],
-    Image: '/assets/school.jpg',
-     live: 'https://vertex-sch-mgt.onrender.com/',
-    github: '',
+    Image: '/assets/glow.jpg',
+     live: 'https://glowstride.vercel.app/',
+   
+    github: 'https://github.com/PixelVans',
   },
   {
     num: '06',
     category: 'fullstack',
+    title: 'Vertex SCH mgt',
+    description: 'A Proposed school management system built on nextjs',
+    stack: [{ name: 'Next.js' }, { name: 'Tailwind.css' }, { name: 'Node.js' }],
+    Image: '/assets/school.jpg',
+     live: 'https://vertex-sch-mgt.onrender.com/',
+    github: 'https://github.com/PixelVans',
+  },
+ 
+  
+  {
+    num: '07',
+    category: 'fullstack',
     title: 'library',
-    description: 'sketch project, big screens only',
+    description: 'sketch project, big screens only (incomplete)',
     stack: [{ name: 'Next.js' }, { name: 'Tailwind.css' }, { name: 'Node.js' }],
     Image: '/assets/books.jpg',
      live: 'https://vanslibrary.onrender.com/',
-    github: '',
+    github: 'https://github.com/PixelVans',
   },
 ]
 
@@ -103,7 +124,7 @@ const Work = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-[30px]'>
           <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col 
-        xl:justify-between order-2 xl:order-none'>
+                xl:justify-between order-2 xl:order-none'>
             <div className='flex flex-col gap-[30px] h-[50%]'>
               <div
                 className='text-5xl sm:text-8xl leading-none font-extrabold 

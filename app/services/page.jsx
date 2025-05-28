@@ -14,24 +14,27 @@ const services = [
     description: 'Crafting modern and responsive websites tailored to your business needs.',
     href: ''
   },
-  { 
+  {
     num: '02',
-    title: 'Graphic Design',
-    description: 'Creating eye-catching visuals to enhance your brand identity and communication.',
+    title: 'Data Entry/Extraction',
+    description: 'Scraping websites and mining valuable data to empower your business with actionable insights.',
     href: ''
   },
-  { 
+  
+  {
     num: '03',
-    title: 'Magazine',
-    description: 'Designing engaging magazine layouts that captivate readers and deliver your message effectively.',
+    title: 'Automation',
+    description: 'Developing intelligent bots and automation tools to streamline tasks, boost efficiency, and reduce manual work.',
     href: ''
   },
-  { 
+  
+  {
     num: '04',
-    title: 'Blogs',
-    description: 'Developing compelling blog content and design to attract and retain your audience.',
+    title: 'Database Management',
+    description: 'Designing, organizing, and maintaining efficient databases to ensure secure and reliable data storage and access.',
     href: ''
-  },
+  }
+  
 ];
 
 

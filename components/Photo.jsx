@@ -57,7 +57,7 @@ const Photo = () => {
             quality={100}
             fill
             alt="profile picture"
-            className="object-contain p-[20px] xl:p-[30px] ml-3 sm:ml-4 lg:ml-5  xl:mt-[-40px] md:mt-[-20px] mt-[-20px]"
+            className="object-contain p-[40px] xl:p-[55px] ml- sm:ml- lg:ml-  xl:mt-[-15px] md:mt-[-10px] mt-[-10px]"
           />
         </motion.div>
       </motion.div>
