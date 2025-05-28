@@ -52,7 +52,7 @@ const Photo = () => {
           className="absolute w-[95%] h-[95%] flex items-center justify-center mix-blend-lighten"
         >
           <Image
-            src="/assets/pfp.jpg"
+            src="/assets/pfp.png"
             priority
             quality={100}
             fill
