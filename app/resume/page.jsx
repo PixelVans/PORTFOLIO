@@ -2,18 +2,8 @@
  
 
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-} from 'react-icons/fa';
-
-import {SiTailwindcss, SiNextdotjs} from 'react-icons/si';
-import { SiRedux } from 'react-icons/si'; // Import the Redux icon
-import { SiVite } from 'react-icons/si'; // Import the Vite icon
+import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
+import { SiVite, SiTailwindcss, SiRedux, SiNextdotjs, SiFlask, SiDjango } from 'react-icons/si';
 
  //about data
 const about = {
@@ -23,7 +13,7 @@ description: 'I am a passionate full-stack developer specializing in efficient a
   info: [
     {
       fieldName: 'Name',
-      fieldValue: 'Pixel Vans'
+      fieldValue: 'Evans Memba'
     },
     {
       fieldName: 'Phone',
@@ -86,8 +76,8 @@ const education = {
   description: 'Gaining essential web development skills through courses and projects.',
   items: [
     {
-      institution: 'FreeCodeCamp',
-      degree: 'Front-end Track',
+      institution: 'Technical University Of Kenya',
+      degree: 'Bachelor of Technology (Computer Technology)',
     
     },
     { 
@@ -100,15 +90,15 @@ const education = {
 
 const skills = {
   title: 'My Skills',
- description: 'Mastery of the technologies below, ensuring high-quality development.',
+  description: 'Mastery of the technologies below, ensuring high-quality development.',
   skillList: [
     {
       icon: <FaHtml5 />,
-      name: 'HTML5'
+      name: 'HTML5',
     },
     {
       icon: <FaCss3 />,
-      name: 'CSS3'
+      name: 'CSS3',
     },
     {
       icon: <FaJs />,
@@ -116,11 +106,11 @@ const skills = {
     },
     {
       icon: <FaReact />,
-      name: 'React.js'
+      name: 'React.js',
     },
     {
-        icon: <SiVite />,
-      name: 'Vite'
+      icon: <SiVite />,
+      name: 'Vite',
     },
     {
       icon: <SiTailwindcss />,
@@ -133,6 +123,22 @@ const skills = {
     {
       icon: <SiRedux />,
       name: 'Redux',
+    },
+    {
+      icon: <SiNextdotjs />,
+      name: 'Next.js',
+    },
+    {
+      icon: <FaPython />,
+      name: 'Python',
+    },
+    {
+      icon: <SiFlask />,
+      name: 'Flask',
+    },
+    {
+      icon: <SiDjango />,
+      name: 'Django',
     },
   ],
 };
@@ -254,8 +260,8 @@ import { easeIn, motion } from 'framer-motion';
                        <li key={index}>
                          <TooltipProvider delayDuration={100}>
                            <Tooltip>
-                             <TooltipTrigger className='w-full h-[130px]  bg-[#232329] rounded-xl flex justify-center items-center group'>
-                               <div className='text-6xl group-hover:text-accent transition-all duration-300'>
+                             <TooltipTrigger className='w-full h-[100px]  bg-[#232329] rounded-xl flex justify-center items-center group'>
+                               <div className='text-5xl group-hover:text-accent transition-all duration-300'>
                                  {skill.icon}
                                </div>
                              </TooltipTrigger>
