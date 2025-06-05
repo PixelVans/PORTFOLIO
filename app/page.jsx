@@ -31,7 +31,7 @@ const Home = () => {
   const handleDownload = useCallback(() => {
     const link = document.createElement("a");
     link.href = "/assets/CV.pdf";
-    link.download = "Evans-CV.pdf";
+    link.download = "Evans_Memba_CV.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -100,7 +100,7 @@ const Home = () => {
           >
             <h2 className="text-xl font-bold mb-4 text-black">Download CV?</h2>
             <p className="text-slate-950 mb-6 text-lg">
-              Confirm to download the CV
+            Please confirm to download the CV.
             </p>
             <div className="flex justify-center gap-4 ">
               <Button
