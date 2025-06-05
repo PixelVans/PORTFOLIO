@@ -109,9 +109,17 @@ const Home = () => {
               >
                 Yes, Download
               </Button>
-              <Button variant="outline" onClick={closeModal}>
-                Cancel
-              </Button>
+                        <button
+            onClick={closeModal}
+            className="border border-red-700 bg-white text-red-600 font-bold px-4 py-1 rounded-full hover:bg-red-500 hover:text-white transition"
+          >
+            Cancel
+          </button>
+
+
+
+
+
             </div>
           </div>
         </div>
