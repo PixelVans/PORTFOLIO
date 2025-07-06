@@ -25,7 +25,7 @@ const projects = [
     description: 'A full-stack AI-powered music recommendation app developed using React, Vite, Tailwind CSS, Node.js, and OpenAI API for natural language understanding.',
     stack: [{ name: 'React' }, { name: 'Tailwind CSS' }, { name: 'Node.js' }, { name: 'OpenAI API' }],
     Image: '/assets/heydj.jpg',
-    live: 'https://heydjtest.vercel.app/',
+    live: 'https://wheresmysong.com/',
     github: 'https://github.com/PixelVans'
   },
   
